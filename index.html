@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Học tiếng Trung · Bài 13–15</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fff6f8;--card:#fff;--ink:#4a3540;--mut:#a28b96;--pri:#f08fb0;--pri2:#fbd3e2;--mint:#cdf3e3;--peach:#ffe2c6;--sky:#cfe8fb;--lav:#e1d8fb;--line:#f6dde6;--ok:#4ade80;--bad:#fb7185}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241a1f;--card:#33252c;--ink:#fbeaf1;--mut:#c4a9b5;--line:#4d3a43;--mint:#2f5a45;--peach:#6b4a2f;--sky:#2f4f66;--lav:#453a6b;--pri2:#6b3a58}}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+header{background:linear-gradient(120deg,var(--pri2),var(--lav),var(--sky));padding:20px 16px 16px;text-align:center;color:#3d2f4a}
+header h1{margin:0;font-size:1.35rem}header p{margin:4px 0 0;font-size:.85rem}
+nav{display:flex;gap:6px;overflow-x:auto;padding:10px 12px;background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+nav button{flex:0 0 auto;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:8px 13px;border-radius:999px;font-size:.85rem;cursor:pointer}
+nav button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+main{max-width:720px;margin:0 auto;padding:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 6px 18px rgba(240,143,176,.15)}
+.han{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif}
+input.s{width:100%;padding:11px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:1rem;margin-bottom:10px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse}
+th{background:var(--pri2);color:#3d2f4a;padding:8px;font-size:.8rem;text-align:left}
+td{padding:8px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:nth-child(even) td{background:rgba(240,143,176,.07)}
+td.h{font-size:1.5rem;font-weight:600}td.p{color:var(--pri);font-weight:600}
+.sp{border:0;background:var(--peach);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:1rem}
+.btn{border:0;background:var(--pri);color:#fff;padding:10px 18px;border-radius:14px;font-size:.95rem;cursor:pointer}
+.btn.g{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.row{display:flex;gap:8px;justify-content:center;margin-top:14px;flex-wrap:wrap;align-items:center}
+.fc{perspective:900px;height:260px;cursor:pointer}
+.fi{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.fc.f .fi{transform:rotateY(180deg)}
+.fs{position:absolute;inset:0;backface-visibility:hidden;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
+.fs.a{background:linear-gradient(135deg,var(--card),var(--mint));border:2px solid var(--mint)}
+.fs.b{background:linear-gradient(135deg,var(--peach),var(--pri2));color:#4a3320;transform:rotateY(180deg)}
+.big{font-size:4rem;font-weight:700}
+.stat{display:flex;justify-content:space-between;font-size:.85rem;color:var(--mut);margin-bottom:10px}
+.q{text-align:center;padding:14px 0}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.opt{padding:14px 8px;border-radius:16px;border:2px solid var(--line);background:var(--bg);color:var(--ink);font-size:1.05rem;cursor:pointer;min-height:56px}
+.opt.ok{background:var(--ok);color:#fff;border-color:var(--ok)}.opt.no{background:var(--bad);color:#fff;border-color:var(--bad)}
+.zone{min-height:64px;border:2px dashed var(--pri);border-radius:16px;padding:8px;display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.tk{padding:8px 14px;border-radius:12px;background:var(--sky);border:0;color:#24404f;font-size:1.4rem;cursor:pointer}
+.zone .tk{background:var(--lav);color:#33284a}
+.msg{text-align:center;min-height:26px;font-weight:600;margin-top:8px}
+.ref{background:var(--peach);color:#4a3320;border-radius:14px;padding:10px;margin-top:8px;font-weight:500}
+.mut{color:var(--mut)}
+</style>
+</head>
+<body>
+<header><h1>学汉语 · Bài 13–15</h1><p>Từ vựng mới · bấm 🔊 để nghe đọc mẫu</p></header>
+<nav id="nav"></nav>
+<main id="v"></main>
+<script>
+const D=`手机|shǒujī|điện thoại di động
+电话|diànhuà|điện thoại
+给|gěi|cho, đưa, tặng
+买|mǎi|mua
+打|dǎ|đánh, gọi (điện thoại)
+接|jiē|nghe (máy), đón
+多少|duōshao|bao nhiêu
+号码|hàomǎ|số (điện thoại...)
+行|xíng|được, ổn
+等|děng|đợi, chờ
+帮|bāng|giúp
+帮助|bāngzhù|giúp đỡ
+跟|gēn|cùng với, theo
+医院|yīyuàn|bệnh viện
+到|dào|đến
+钱|qián|tiền
+快/元|kuài/yuán|đồng (đơn vị tiền tệ)
+送|sòng|tiễn, đưa, tặng
+机场|jīchǎng|sân bay
+张|zhāng|tờ, tấm (lượng từ)
+车|chē|xe
+辆|liàng|chiếc (lượng từ của xe)
+出租车|chūzūchē|taxi
+贵|guì|đắt
+便宜|piányi|rẻ
+摩托车|mótuōchē|xe máy
+骑|qí|đi, cưỡi (xe máy, xe đạp)
+汽车|qìchē|ô tô
+开|kāi|lái (xe), mở, bật
+怎么去/来|zěnme qù/lái|đi / đến như thế nào
+医生|yīshēng|bác sĩ
+层|céng|tầng
+啊|a|à, nhé (ngữ khí)
+电梯|diàntī|thang máy
+楼梯|lóutī|cầu thang bộ
+走|zǒu|đi bộ, đi
+上|shàng|lên
+下|xià|xuống
+关|guān|đóng, tắt
+停|tíng|dừng, đỗ
+快|kuài|nhanh
+慢|màn|chậm
+还是|háishi|hay là
+门|mén|cửa`.split('\n').map(l=>{const[h,p,v]=l.split('|');return{h,p,v}});
+
+const S=`你 的 手机 号码 是 多少?|Số điện thoại di động của bạn là bao nhiêu?
+我 的 电话 号码 是 二 三 四 五 六 七|Số điện thoại của tôi là 234567
+请 给 我 你 的 电话 号码|Xin cho tôi số điện thoại của bạn
+请 给 我 一 张 名片|Xin cho tôi một tấm danh thiếp
+这 是 我 的 手机|Đây là điện thoại của tôi
+这 个 手机 太 贵 了|Chiếc điện thoại này đắt quá
+那 个 手机 很 便宜|Chiếc điện thoại kia rất rẻ
+这 个 手机 多少 钱?|Chiếc điện thoại này bao nhiêu tiền?
+这 个 面包 三 元|Cái bánh mì này 3 tệ
+包子 二 元 一 个|Bánh bao 2 tệ một cái
+炒饭 多少 钱?|Cơm rang bao nhiêu tiền?
+火锅 太 贵 了 啊|Lẩu đắt quá đi
+市场 的 面包 很 便宜|Bánh mì ở chợ rất rẻ
+我 要 买 一 辆 汽车|Tôi muốn mua một chiếc ô tô
+他 要 买 一 辆 摩托车|Anh ấy muốn mua một chiếc xe máy
+这 辆 汽车 太 贵 了|Chiếc ô tô này đắt quá
+那 辆 摩托车 很 便宜|Chiếc xe máy kia rất rẻ
+老板 有 三 辆 汽车|Ông chủ có ba chiếc ô tô
+你 要 买 手机 吗?|Bạn muốn mua điện thoại không?
+我 去 商店 买 手机|Tôi đến cửa hàng mua điện thoại
+我 去 超市 买 面包|Tôi đi siêu thị mua bánh mì
+她 去 市场 买 粉|Cô ấy đi chợ mua bún
+我 没有 钱|Tôi không có tiền
+我 给 司机 二 十 元|Tôi đưa tài xế 20 tệ
+我 给 你 打 电话|Tôi gọi điện cho bạn
+你 给 我 打 电话 吧|Bạn gọi điện cho tôi nhé
+我 给 老板 打 电话|Tôi gọi điện cho ông chủ
+喂 请 问 王 经理 在 吗?|Alo, xin hỏi giám đốc Vương có đó không?
+他 在 请 等 一下|Anh ấy có đây, xin chờ một chút
+喂 你 找 谁?|Alo, bạn tìm ai?
+我 接 电话|Tôi nghe điện thoại
+你 接 电话 吧|Bạn nghe điện thoại đi
+经理 在 接 电话|Giám đốc đang nghe điện thoại
+老板 在 开会 请 你 等 一下|Ông chủ đang họp, mời bạn chờ một chút
+开会 请 关 手机|Họp xin hãy tắt điện thoại
+你 等 谁?|Bạn đợi ai?
+我 在 门口 等 你|Tôi đợi bạn ở cửa
+你 在 这里 等 我 吧|Bạn đợi tôi ở đây nhé
+请 你 帮 我 一下|Xin bạn giúp tôi một chút
+你 可以 帮 我 吗?|Bạn có thể giúp tôi không?
+我 可以 帮 你|Tôi có thể giúp bạn
+谢谢 你 的 帮助|Cảm ơn sự giúp đỡ của bạn
+老师 帮助 学生|Giáo viên giúp đỡ học sinh
+朋友 帮 我 买 手机|Bạn giúp tôi mua điện thoại
+他 帮 我 找 房间|Anh ấy giúp tôi tìm phòng
+明天 去 医院 行 吗?|Ngày mai đi bệnh viện được không?
+星期五 开会 行 吗?|Thứ sáu họp được không?
+下午 三 点 行 吗?|3 giờ chiều được không?
+我 跟 你 去|Tôi đi cùng bạn
+我 跟 朋友 去 超市|Tôi cùng bạn đi siêu thị
+你 跟 谁 去 医院?|Bạn đi bệnh viện với ai?
+我 跟 老师 学习 汉语|Tôi học tiếng Hán với giáo viên
+他 跟 经理 去 出差|Anh ấy đi công tác cùng giám đốc
+医院 在 哪儿?|Bệnh viện ở đâu?
+医院 离 这里 远 吗?|Bệnh viện cách đây có xa không?
+医院 离 公司 很 近|Bệnh viện cách công ty rất gần
+他 去 医院 了|Anh ấy đến bệnh viện rồi
+她 是 医院 的 医生|Cô ấy là bác sĩ của bệnh viện
+医生 在 医院 工作|Bác sĩ làm việc ở bệnh viện
+我 要 去 看 医生|Tôi phải đi khám bác sĩ
+你 去 看 医生 吧|Bạn đi khám bác sĩ đi
+医生 今天 很 忙|Hôm nay bác sĩ rất bận
+我 到 公司 了|Tôi đến công ty rồi
+你 几 点 到 公司?|Mấy giờ bạn đến công ty?
+我 八 点 到 公司|Tám giờ tôi đến công ty
+飞机 下午 四 点 到 海防|Máy bay 4 giờ chiều đến Hải Phòng
+他 明天 到 越南|Ngày mai anh ấy đến Việt Nam
+经理 现在 到 机场 了|Giám đốc bây giờ đến sân bay rồi
+机场 离 这里 大概 二 十 公里|Sân bay cách đây khoảng 20 km
+机场 离 海防 远 吗?|Sân bay cách Hải Phòng có xa không?
+我 送 经理 去 机场|Tôi đưa giám đốc ra sân bay
+司机 送 老板 去 公司|Tài xế đưa ông chủ đến công ty
+明天 你 送 我 去 机场 吗?|Ngày mai bạn đưa tôi ra sân bay à?
+我 送 你 回 家|Tôi đưa bạn về nhà
+他 送 我 一 张 名片|Anh ấy tặng tôi một tấm danh thiếp
+我 坐 出租车 去 机场|Tôi đi taxi ra sân bay
+去 机场 坐 出租车 多少 钱?|Đi taxi ra sân bay bao nhiêu tiền?
+出租车 贵 还是 便宜?|Taxi đắt hay rẻ?
+你 坐 汽车 还是 坐 飞机?|Bạn đi ô tô hay đi máy bay?
+你 骑 摩托车 还是 开 汽车?|Bạn đi xe máy hay lái ô tô?
+我 骑 摩托车 去 公司|Tôi đi xe máy đến công ty
+他 每 天 骑 摩托车 上班|Mỗi ngày anh ấy đi xe máy đi làm
+司机 开 汽车|Tài xế lái ô tô
+我 会 开 车|Tôi biết lái xe
+你 会 骑 摩托车 吗?|Bạn biết đi xe máy không?
+这 辆 汽车 很 快 那 辆 汽车 很 慢|Chiếc ô tô này nhanh, chiếc kia chậm
+请 开 慢 一点儿|Xin lái chậm một chút
+请 快 一点儿|Xin nhanh lên một chút
+请 停 在 门口|Xin dừng ở cửa ra vào
+汽车 停 在 这儿|Ô tô đỗ ở đây
+请 开 门|Xin hãy mở cửa
+请 关 门|Xin hãy đóng cửa
+门 在 哪儿?|Cửa ở đâu?
+你 怎么去 公司?|Bạn đến công ty bằng cách nào?
+你 怎么去 医院?|Bạn đến bệnh viện bằng cách nào?
+机场 怎么去?|Đi đến sân bay thế nào?
+他 怎么来 公司?|Anh ấy đến công ty bằng cách nào?
+你 去 哪儿 啊?|Bạn đi đâu thế?
+办公室 在 几 层?|Văn phòng ở tầng mấy?
+办公室 在 五 层|Văn phòng ở tầng 5
+经理 的 办公室 在 八 层|Văn phòng giám đốc ở tầng 8
+会议室 在 三 层|Phòng họp ở tầng 3
+仓库 在 一 层|Kho ở tầng 1
+洗手间 在 哪 层?|Nhà vệ sinh ở tầng nào?
+我 坐 电梯 上 楼|Tôi đi thang máy lên lầu
+我 坐 电梯 下 楼|Tôi đi thang máy xuống lầu
+电梯 在 哪儿?|Thang máy ở đâu?
+电梯 太 慢 了|Thang máy chậm quá
+楼梯 在 门口|Cầu thang ở cửa ra vào
+我 走 楼梯 上 五 层|Tôi đi cầu thang bộ lên tầng 5
+他 走 楼梯 下 楼|Anh ấy đi cầu thang bộ xuống lầu
+你 走 楼梯 还是 坐 电梯?|Bạn đi cầu thang bộ hay thang máy?
+我 家 离 学校 很 近 我 走 回 家|Nhà tôi gần trường, tôi đi bộ về nhà`.split('\n').map(l=>{const[a,v]=l.split('|');return{t:a.replace('?','').split(' '),v,q:a.endsWith('?')}});
+
+const $=s=>document.querySelector(s),shuf=a=>[...a].sort(()=>Math.random()-.5);
+function say(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t.split('/')[0].replace(/[()]/g,''));u.lang='zh-CN';u.rate=.8;const v=speechSynthesis.getVoices().find(x=>x.lang.replace('_','-').startsWith('zh'));if(v)u.voice=v;speechSynthesis.speak(u)}catch(e){}}
+window.say=say;
+const T=[['list','📖 Danh sách'],['card','🃏 Flashcard'],['py','🎯 Hán → Pinyin'],['vi','🎯 Hán → Nghĩa'],['han','🎯 Nghĩa → Hán'],['sen','🧩 Ghép câu']];
+const nav=$('#nav');
+T.forEach(([k,n])=>{const b=document.createElement('button');b.textContent=n;b.dataset.k=k;b.onclick=()=>go(k);nav.appendChild(b)});
+function go(k){[...nav.children].forEach(b=>b.classList.toggle('on',b.dataset.k===k));({list,card,py:()=>quiz('py'),vi:()=>quiz('vi'),han:()=>quiz('han'),sen})[k]();window.scrollTo(0,0)}
+
+function list(){
+ $('#v').innerHTML=`<input class="s" id="q" placeholder="🔍 Tìm chữ Hán, pinyin hoặc nghĩa..."><div class="card tw"><table><thead><tr><th>#</th><th>Chữ Hán</th><th>Phiên âm</th><th>Nghĩa</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>`;
+ const draw=f=>{$('#tb').innerHTML=D.map((w,i)=>({w,i})).filter(({w})=>!f||(w.h+w.p+w.v).toLowerCase().includes(f)).map(({w,i})=>`<tr><td class="mut">${i+1}</td><td class="h han">${w.h}</td><td class="p">${w.p}</td><td>${w.v}</td><td><button class="sp" onclick="say('${w.h}')">🔊</button></td></tr>`).join('')};
+ draw('');$('#q').oninput=e=>draw(e.target.value.trim().toLowerCase());
+}
+
+let deck=[],ci=0;
+function card(){if(!deck.length)deck=[...D];
+ const w=deck[ci],hs=w.h.split('/');
+ $('#v').innerHTML=`<div class="stat"><span>Thẻ ${ci+1}/${deck.length}</span><span>Bấm vào thẻ để lật</span></div>
+ <div class="fc" id="fc"><div class="fi"><div class="fs a"><div class="big han">${hs[0]}</div>${hs[1]?`<div class="han" style="font-size:1.4rem">/ ${hs[1]}</div>`:''}</div><div class="fs b"><div style="font-size:2rem;font-weight:700">${w.p}</div><div style="font-size:1.4rem;margin-top:8px">${w.v}</div></div></div></div>
+ <div class="row"><button class="btn g" id="pv">◀ Trước</button><button class="sp" id="sd" style="width:46px;height:46px">🔊</button><button class="btn g" id="nx">Sau ▶</button></div>
+ <div class="row"><button class="btn" id="sh">🔀 Xáo trộn</button><button class="btn g" id="rs">↺ Theo thứ tự</button></div>`;
+ $('#fc').onclick=()=>$('#fc').classList.toggle('f');
+ $('#sd').onclick=()=>say(w.h);
+ $('#pv').onclick=()=>{ci=(ci-1+deck.length)%deck.length;card()};
+ $('#nx').onclick=()=>{ci=(ci+1)%deck.length;card()};
+ $('#sh').onclick=()=>{deck=shuf(D);ci=0;card()};
+ $('#rs').onclick=()=>{deck=[...D];ci=0;card()};
+}
+
+const M={py:{t:'Chọn phiên âm đúng',q:w=>w.h,a:w=>w.p,big:1},vi:{t:'Chọn nghĩa đúng',q:w=>w.h,a:w=>w.v,big:1},han:{t:'Chọn chữ Hán đúng',q:w=>w.v,a:w=>w.h,han:1}};
+let sc={score:0,total:0,streak:0};
+function quiz(k){
+ const m=M[k],w=D[Math.floor(Math.random()*D.length)],ans=m.a(w);
+ let o=[ans];for(const x of shuf(D)){const t=m.a(x);if(!o.includes(t))o.push(t);if(o.length==4)break}
+ o=shuf(o);
+ $('#v').innerHTML=`<div class="card"><div class="stat"><span>${m.t}</span><span>✅ ${sc.score}/${sc.total} · 🔥 ${sc.streak}</span></div>
+ <div class="q"><div class="${m.big?'big han':''}" style="${m.big?'':'font-size:1.8rem;font-weight:700'}">${m.q(w)}</div>${m.big?`<button class="sp" style="margin-top:8px" onclick="say('${w.h}')">🔊</button>`:''}</div>
+ <div class="opts">${o.map(t=>`<button class="opt ${m.han?'han':''}" style="${m.han?'font-size:1.5rem':''}">${t}</button>`).join('')}</div>
+ <div class="msg" id="mg"></div><div class="row"><button class="btn" id="nx" style="display:none">Câu tiếp ▶</button></div></div>`;
+ document.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{
+  const ok=b.textContent===ans;sc.total++;ok?(sc.score++,sc.streak++):sc.streak=0;
+  document.querySelectorAll('.opt').forEach(x=>{x.disabled=true;if(x.textContent===ans)x.classList.add('ok')});
+  if(!ok)b.classList.add('no');
+  $('#mg').innerHTML=ok?'🎉 Chính xác!':`❌ Đáp án: ${w.h} · ${w.p} · ${w.v}`;
+  say(w.h);$('#nx').style.display='';$('#nx').onclick=()=>quiz(k);
+ });
+}
+
+let si=0,order=[];
+function sen(){
+ if(!order.length)order=shuf(S.map((_,i)=>i));
+ const s=S[order[si%order.length]];let toks=shuf(s.t.map((t,i)=>({t,i})));
+ let ans=[];
+ $('#v').innerHTML=`<div class="card"><div class="stat"><span>Câu ${si%order.length+1}/${order.length}</span><span>Chỉ dùng từ vựng đã học</span></div>
+ <div class="q"><div class="mut" style="font-size:.9rem">Ghép thành câu đúng:</div><div style="font-size:1.3rem;font-weight:700;margin-top:6px">${s.v}</div></div>
+ <div class="zone" id="zn"></div><div class="row" id="pool" style="margin-top:0"></div>
+ <div class="msg" id="mg"></div>
+ <div class="row"><button class="btn g" id="rs">↺ Làm lại</button><button class="btn g" id="xt">🔀 Xáo từ</button><button class="btn" id="ck">Kiểm tra</button></div>
+ <div class="row"><button class="btn g" id="nx">Câu khác ▶</button></div></div>`;
+ const draw=()=>{
+  $('#zn').innerHTML=ans.map(a=>`<button class="tk han" data-i="${a.i}" data-w="1">${a.t}</button>`).join('');
+  $('#pool').innerHTML=toks.filter(x=>!ans.includes(x)).map(x=>`<button class="tk han" data-i="${x.i}">${x.t}</button>`).join('');
+  document.querySelectorAll('.tk').forEach(b=>b.onclick=()=>{const x=toks.find(t=>t.i==b.dataset.i);if(b.dataset.w)ans=ans.filter(a=>a!==x);else{ans.push(x);say(x.t)}draw()});
+ };draw();
+ const full=s.t.join('')+(s.q?'？':'。');
+ $('#rs').onclick=()=>{ans=[];draw();$('#mg').textContent=''};
+ $('#xt').onclick=()=>{toks=shuf(toks);draw()};
+ $('#ck').onclick=()=>{
+  const ok=ans.length===s.t.length&&ans.every((a,i)=>a.t===s.t[i]);
+  $('#mg').innerHTML=ok?`🎉 Chính xác!<br><span class="han" style="font-size:1.4rem">${full}</span>`:`❌ Chưa đúng<div class="ref">💡 Đáp án tham khảo:<br><span class="han" style="font-size:1.4rem">${s.t.join(' ')}${s.q?' ？':' 。'}</span></div>`;
+  say(s.t.join(''));
+ };
+ $('#nx').onclick=()=>{si++;sen()};
+}
+go('list');
+</script>
+</body>
+</html>
